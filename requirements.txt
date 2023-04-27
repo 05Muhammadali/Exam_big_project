@@ -2,3 +2,4 @@ asgiref==3.6.0
 Django==4.2
 django-environ==0.10.0
 wheel==0.38.4
+pillow==9.5.0
