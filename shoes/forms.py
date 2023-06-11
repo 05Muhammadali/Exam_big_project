@@ -1,10 +1,10 @@
 from django import forms
 
-from .models import Buy
+from .models import Buys
 
 
 class ChoiceForm(forms.ModelForm):
     class Meta:
-        model = Buy
+        model = Buys
         exclude = ['product']
         fields = '__all__'
