@@ -13,7 +13,7 @@ class Category(models.Model):
         super(Category, self).save(*args, **kwargs)
 
 
-class Types(models.Model):
+class Sneakers(models.Model):
     name = models.CharField(max_length=255)
     slug = models.SlugField(unique=True, blank=True)
     type = models.ForeignKey(Category, on_delete=models.CASCADE)
@@ -33,10 +33,10 @@ class Types(models.Model):
     image = models.ImageField()
 
 
-class Buys(models.Model):
+class Buy(models.Model):
     name = models.CharField(max_length=156)
     phone = models.CharField(max_length=50)
-    product = models.ForeignKey(Types, on_delete=models.CASCADE, null=True)
+    product = models.ForeignKey(Sneakers, on_delete=models.CASCADE, null=True)
     ALL_SIZES = (
         ("36", "36"),
         ("37", "37"),
